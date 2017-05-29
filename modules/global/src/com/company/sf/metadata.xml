@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<metadata xmlns="http://schemas.haulmont.com/cuba/metadata.xsd">
+    <metadata-model namespace="sf"
+                    root-package="com.company.sf">
+        <class store="salesforce">com.company.sf.entity.Account</class>
+        <class store="salesforce">com.company.sf.entity.SalesforceEntity</class>
+    </metadata-model>
+</metadata>

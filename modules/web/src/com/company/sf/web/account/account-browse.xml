@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://browseCaption"
+        class="com.company.sf.web.account.AccountBrowse"
+        focusComponent="accountsTable"
+        lookupComponent="accountsTable"
+        messagesPack="com.company.sf.web.account">
+    <dsContext>
+        <collectionDatasource id="accountsDs"
+                              datasourceClass="com.company.sf.ds.SalesforceDatasource"
+                              class="com.company.sf.entity.Account">
+            <query>
+                <![CDATA[select Id, Name, Phone, Description from Account order by Name]]>
+            </query>
+        </collectionDatasource>
+    </dsContext>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="accountsTable"
+            spacing="true">
+        <table id="accountsTable"
+               multiselect="true"
+               width="100%">
+            <actions>
+                <action id="create"/>
+                <action id="edit"/>
+                <action id="remove"/>
+                <action id="refresh"/>
+            </actions>
+            <columns>
+                <column id="name"/>
+                <column id="phone"/>
+                <column id="description"/>
+                <column id="id"/>
+            </columns>
+            <rows datasource="accountsDs"/>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn"
+                        action="accountsTable.create"/>
+                <button id="editBtn"
+                        action="accountsTable.edit"/>
+                <button id="removeBtn"
+                        action="accountsTable.remove"/>
+                <button id="refreshBtn"
+                        action="accountsTable.refresh"/>
+            </buttonsPanel>
+        </table>
+    </layout>
+</window>
