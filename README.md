@@ -6,7 +6,7 @@ This application demonstrates a usage of custom data stores. By default, CUBA Pl
   
 ## Implementation Details
 
-###Salesforce Connection Configuration
+### Salesforce Connection Configuration
 
 All salesforce connection settings must be defined with the `SalesforceConfig` configuration interface. You can enter the values in the `Administration - Application Properties` screen.
 
