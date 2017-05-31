@@ -29,24 +29,6 @@ public class Account extends SalesforceEntity {
     @SalesforceField("Description")
     protected String description;
 
-    @MetaProperty
-    @SalesforceField("MyCustomCheckbox__c")
-    protected Boolean myCustomCheckbox;
-
-    @MetaProperty
-    @SalesforceField("MyCustomDateTime__c")
-    @Temporal(TemporalType.TIMESTAMP)
-    protected Date myCustomDateTime;
-
-    @MetaProperty
-    @SalesforceField("MyCustomDate__c")
-    @Temporal(TemporalType.DATE)
-    protected Date myCustomDate;
-
-    @MetaProperty
-    @SalesforceField("myCustomNumner__c")
-    protected BigDecimal myCustomNumber;
-
     public void setName(String name) {
         this.name = name;
     }
@@ -69,37 +51,5 @@ public class Account extends SalesforceEntity {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Boolean getMyCustomCheckbox() {
-        return myCustomCheckbox;
-    }
-
-    public void setMyCustomCheckbox(Boolean myCustomCheckbox) {
-        this.myCustomCheckbox = myCustomCheckbox;
-    }
-
-    public Date getMyCustomDateTime() {
-        return myCustomDateTime;
-    }
-
-    public void setMyCustomDateTime(Date myCustomDateTime) {
-        this.myCustomDateTime = myCustomDateTime;
-    }
-
-    public Date getMyCustomDate() {
-        return myCustomDate;
-    }
-
-    public void setMyCustomDate(Date myCustomDate) {
-        this.myCustomDate = myCustomDate;
-    }
-
-    public BigDecimal getMyCustomNumber() {
-        return myCustomNumber;
-    }
-
-    public void setMyCustomNumber(BigDecimal myCustomNumber) {
-        this.myCustomNumber = myCustomNumber;
     }
 }
